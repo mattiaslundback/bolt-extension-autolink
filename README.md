@@ -29,7 +29,7 @@ b) The other argument is the twig expression for the search argument, e g the ti
 
 The expression will then look like this: {{ autolink('https://www.googleapis.com/customsearch/v1?key=[INSERT_YOUR_API_KEY]&cx=[Custom_search_engine_ID]&q=%search%&alt=atom', record.title) }}
 
-4. You can pass other options to the Twig function:  
+4 You can pass other options to the Twig function:  
 `{{ autolink('[search string]', record.title, { 'limit': limit, 'showDesc': true }) }}`  
 	+ limit: The amount of links to be shown, default: 10
 	+ showDesc: Show the full description, default: false
