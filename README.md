@@ -17,7 +17,7 @@ Example: `enabled_extensions: [ Autolink, your_other_extensions ... ]`
 
 a) The search string for e g Google Custom Search API. It looks like this.
 
-"https://www.googleapis.com/customsearch/v1?key=[INSERT_YOUR_API_KEY]&cx=[Custom search engine ID]&q=%search%&alt=atom"
+"https://www.googleapis.com/customsearch/v1?key=[INSERT_YOUR_API_KEY]&cx=[Custom_search_engine_ID]&q=%search%&alt=atom"
 
 Instead of the search query insert [%search%] as in the string above. 
 
