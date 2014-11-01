@@ -27,7 +27,7 @@ For how to create the Custom Search Engine look at this page: https://developers
 
 b) The other argument is the twig expression for the search argument, e g the title of the post (record.title). Spaces will automatically be converted to"+" to make it a search string. You can also use other twig functions like "entry.title" as long as it is an one-dimensional string.
 
-The expression will then look like this: {{ autolink('https://www.googleapis.com/customsearch/v1?key=[INSERT_YOUR_API_KEY]&cx=[Custom search engine ID]&q=%search%&alt=atom', record.title) }}
+The expression will then look like this: {{ autolink('https://www.googleapis.com/customsearch/v1?key=[INSERT_YOUR_API_KEY]&cx=[Custom_search_engine_ID]&q=%search%&alt=atom', record.title) }}
 
 4. You can pass other options to the Twig function:  
 `{{ autolink('[search string]', record.title, { 'limit': limit, 'showDesc': true }) }}`  
