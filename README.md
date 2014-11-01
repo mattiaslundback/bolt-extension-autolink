@@ -1,7 +1,7 @@
 Bolt Autolink
 =======================
 
-Autolink extension for the [Bolt CMS](http://www.bolt.cm). Finds  webpages relevant to an entry or page and inserts links to these pages. The extension uses Google Custom Search which makes it possible to restrict the search to certain websites, i e newspapers in a certain country. these webpages.
+Autolink extension for the [Bolt CMS](http://www.bolt.cm). Finds  webpages relevant to an entry or page and inserts links to these pages. The extension uses Google Custom Search which makes it possible to restrict the search to certain websites, i e newspapers or blogs in a certain country.
 
 This extension is based on the RSSAggregator code by Sebastian Klier & Gawain Lynch and adapted by Mattias Lundbäck.
 
