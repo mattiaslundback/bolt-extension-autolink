@@ -1,0 +1,25 @@
+{
+	"name" : "bolt/Autolink",
+	"description" : "Autolink extension for Bolt",
+	"type" : "bolt-extension",
+	"keywords" : [
+		"automatic link search blog"
+	],
+	"require" : {
+		"bolt/bolt" : ">=2.0.0,<3.0.0"
+	},
+	"license" : "GPL-3.0+",
+	"authors" : [{
+			"name" : "Mattias Lundbäck",
+			"email" : "mattias.lundback@ekonomism.us"
+		}
+	],
+	"autoload" : {
+		"files" : [
+			"init.php"
+		],
+		"psr-4" : {
+			"Bolt\\Extension\\Bolt\\Autolink\\" : ""
+		}
+	}
+}
