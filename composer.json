@@ -1,5 +1,5 @@
 {
-	"name" : "bolt/autolink",
+	"name" : "autolink",
 	"description" : "Autolink extension for Bolt",
 	"type" : "bolt-extension",
 	"keywords" : [
