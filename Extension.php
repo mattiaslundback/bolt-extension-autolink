@@ -46,8 +46,64 @@ class Extension extends \Bolt\BaseExtension
 
         // Initialize the Twig function
         $this->addTwigFunction('Autolink', 'twigAutolink_aggregator');
+        $this->addTwigFunction('AutolinkRSS', 'twigAutolink_RSS');
 
     }
+    
+    
+    
+     /**
+     * Twig function {{ twigAutolink_RSS() }} in Autolink extension.
+     */
+    function twigAutolink_RSS($url = false, $title = false)
+    {
+    
+        
+        if ($title!="") {
+            $title = htmlspecialchars($title, ENT_QUOTES, "UTF-8") . "';\n";
+        } else {
+            $title = "";
+        }
+    
+        $title = str_replace(' ', '+', $title);  
+        $title = str_replace("?", "", $title); 
+        $title = str_replace("!", "", $title);
+        $title = str_replace("-", "", $title);
+        $title = str_replace("(", "", $title);
+        $title = str_replace(")", "", $title);
+        $title = str_replace(",", "", $title);
+        $url = str_replace("%search%", $title, $url);  
+      
+   
+        
+        if(!$url) {
+            return new \Twig_Markup('External feed could not be loaded! No URL specified.', 'UTF-8'); 
+        }
+
+        // Construct a cache handle from the URL
+        $handle = preg_replace('/[^A-Za-z0-9_-]+/', '', $url);
+        $handle = str_replace('httpwww', '', $handle);
+        $cachedir = $this->basepath . '/cache/';
+        $cachefile = $cachedir . '/' . $handle.'.cache';
+
+          // Use cache file if possible
+        if (!file_exists($cachefile)) {
+        	
+            return new \Twig_Markup('No_links', 'UTF-8');
+        }
+        
+        if(file_exists($cachefile)) {
+        	$innehall = file_get_contents($cachefile);
+            return new \Twig_Markup($innehall, 'UTF-8'); 
+        }
+    }
+
+
+
+
+
+
+
 
     /**
      * Twig function {{ twigAutolink_aggregator() }} in Autolink extension.
@@ -63,7 +119,13 @@ class Extension extends \Bolt\BaseExtension
         }
     
         $title = str_replace(' ', '+', $title);  
-        $url = str_replace("%search%", $title, $url);   
+        $title = str_replace("?", "", $title); 
+        $title = str_replace("!", "", $title);
+        $title = str_replace("-", "", $title);
+        $title = str_replace("(", "", $title);
+        $title = str_replace(")", "", $title);
+        $title = str_replace(",", "", $title);
+        $url = str_replace("%search%", $title, $url);  
    
         
         if(!$url) {
@@ -122,7 +184,7 @@ class Extension extends \Bolt\BaseExtension
 
         // Load feed and suppress errors to avoid a failing external URL taking down our whole site
         if (!@$doc->load($url)) {
-            return new \Twig_Markup('External feed could not be loaded!', 'UTF-8');
+            return new \Twig_Markup('No links found by Autolink yet.', 'UTF-8');
         }
 
         // Parse document
@@ -153,10 +215,10 @@ class Extension extends \Bolt\BaseExtension
                 ));
         }
 
-        $html = '<div class="autolink">';
+        $html = '<div class="autolink">' . '     :::     ';
 
         foreach ($items as $item) {
-            $html .= '<a target="_blank" href="' . $item['id'] . '" class="autolink-title" >' . $item['title'] . '</a>' . '   :::   ';
+            $html .= '<a target="_blank" href="' . $item['id'] . '" class="autolink-title" >' . $item['title'] . '</a>' . '     :::     ';
         }
 
         $html .= '</div>';
@@ -166,4 +228,3 @@ class Extension extends \Bolt\BaseExtension
 
         return new \Twig_Markup($html, 'UTF-8');
     }
-}
