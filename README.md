@@ -36,6 +36,11 @@ The expression will then look like this: {{ autolink('https://www.googleapis.com
 	+ showDate: Show the date, default: false  
 	+ descCutoff: Number of characters to display in the description, default: 100
 
+5. If you would like to use the cache only (for e g RSS-feeds), without passing any requests to Google, you can use the function autolinkRSS instead. It takes two arguments and returns the same string as the autolink function. To use it in a RSS feed aggregator it is necessary to clean it somewhat. This can be done right in the template with an expression like:
+
+{% set innehall = AutolinkRSS(url, record.title) %} 
+<![CDATA[ {{ innehall|replace({'<div class="autolink">': '', '</div>': '', ':::':'', 'class="autolink-title"':' '})|raw }} ]]>
+
 Customization
 =======================
 
