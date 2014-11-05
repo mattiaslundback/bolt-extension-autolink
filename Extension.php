@@ -5,7 +5,11 @@ namespace Autolink;
 
 class Extension extends \Bolt\BaseExtension
 {
-
+    const NAME = 'autolink';
+    public function getName()
+    {
+        return Extension::NAME;
+    }
     /**
      * Info block for Autolink Extension.
      */
