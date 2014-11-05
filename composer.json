@@ -1,5 +1,5 @@
 {
-	"name" : "mattiaslundback/Autolink",
+	"name" : "mattiaslundback/autolink",
 	"description" : "Autolink extension for Bolt",
 	"type" : "bolt-extension",
 	"keywords" : [
