@@ -1,4 +1,5 @@
 <?php
+
 // Autolink Extension for Bolt, by Mattias Lundback
 
 namespace Bolt\Extension\mattiaslundback\Autolink;
