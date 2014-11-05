@@ -1,7 +1,7 @@
 <?php
 // Autolink Extension for Bolt, by Mattias Lundback
 
-namespace Bolt\Extension\mattiaslundback\autolink;
+namespace Bolt\Extension\mattiaslundback\Autolink;
 
 class Extension extends \Bolt\BaseExtension
 {
@@ -17,7 +17,7 @@ class Extension extends \Bolt\BaseExtension
     {
 
         $data = array(
-            'name' => "Autolink",
+            'name' => "autolink",
             'description' => "Inserts links to relevant content on selected websites. Uses Google Custom Search API.",
             'keywords' => "bolt, automatic link, Google, aggregator",
             'author' => "Mattias Lundback",
