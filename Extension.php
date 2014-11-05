@@ -1,7 +1,7 @@
 <?php
 // Autolink Extension for Bolt, by Mattias Lundback
 
-namespace Autolink;
+namespace Bolt\Extension\mattiaslundback\autolink;
 
 class Extension extends \Bolt\BaseExtension
 {
