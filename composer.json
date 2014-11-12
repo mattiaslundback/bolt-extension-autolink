@@ -1,5 +1,5 @@
 {
-	"name" : "mattiaslundback/autolink",
+	"name" : "mattiaslundback/Autolink",
 	"description" : "Autolink extension for Bolt",
 	"type" : "bolt-extension",
 	"keywords" : [
@@ -19,7 +19,7 @@
 			"init.php"
 		],
 		"psr-4" : {
-			"Bolt\\Extension\\Bolt\\Autolink\\" : [ "",
+			"Bolt\\Extension\\mattiaslundback\\Autolink\\" : [ "",
 				"src/" 
 			]
 		}
