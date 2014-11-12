@@ -22,7 +22,7 @@ class Extension extends \Bolt\BaseExtension
             'description' => "Inserts links to relevant content on selected websites. Uses Google Custom Search API.",
             'keywords' => "bolt, automatic link, Google, aggregator",
             'author' => "Mattias Lundback",
-            'link' => "http://github.com/sekl/Autolink",
+            'link' => "http://github.com/mattiaslundback/Autolink",
             'version' => "1.0",
             'required_bolt_version' => "2.6.3",
             'highest_bolt_version' => "3.0.0",
