@@ -6,7 +6,7 @@
 		"automatic link search blog"
 	],
 	"require" : {
-		"bolt/bolt" : ">=2.0.0,<3.0.0"
+		"bolt/bolt" : ">=1.6.3,<3.0.0"
 	},
 	"license" : "GPL-3.0+",
 	"authors" : [{
