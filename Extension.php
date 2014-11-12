@@ -24,7 +24,7 @@ class Extension extends \Bolt\BaseExtension
             'author' => "Mattias Lundback",
             'link' => "http://github.com/mattiaslundback/Autolink",
             'version' => "1.0",
-            'required_bolt_version' => "2.6.3",
+            'required_bolt_version' => "1.6.3",
             'highest_bolt_version' => "3.0.0",
             'type' => "General",
             'first_releasedate' => "2014-10-31",
