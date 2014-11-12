@@ -19,7 +19,9 @@
 			"init.php"
 		],
 		"psr-4" : {
-			"Bolt\\Extension\\mattiaslundback\\Autolink\\" : ""
+			"Bolt\\Extension\\mattiaslundback\\Autolink\\" : [ "",
+				"src/" 
+			]
 		}
 	}
 }
