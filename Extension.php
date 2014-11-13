@@ -11,11 +11,7 @@ class Extension extends \Bolt\BaseExtension
     {
         return Extension::NAME;
     }
-    /**
-     
     
-
-    /**
      * Initialize Autolink. Called during bootstrap phase.
      */
     function init()
