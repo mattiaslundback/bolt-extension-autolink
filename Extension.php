@@ -12,30 +12,8 @@ class Extension extends \Bolt\BaseExtension
         return Extension::NAME;
     }
     /**
-     * Info block for Autolink Extension.
-     */
-    function info()
-    {
-
-        $data = array(
-            'name' => "autolink",
-            'description' => "Inserts links to relevant content on selected websites. Uses Google Custom Search API.",
-            'keywords' => "bolt, automatic link, Google, aggregator",
-            'author' => "Mattias Lundback",
-            'link' => "http://github.com/mattiaslundback/Autolink",
-            'version' => "1.0",
-            'required_bolt_version' => "1.6.3",
-            'highest_bolt_version' => "3.0.0",
-            'type' => "General",
-            'first_releasedate' => "2014-10-31",
-            'latest_releasedate' => "2014-10-31",
-            'dependencies' => "",
-            'priority' => 10
-        );
-
-        return $data;
-
-    }
+     
+    
 
     /**
      * Initialize Autolink. Called during bootstrap phase.
