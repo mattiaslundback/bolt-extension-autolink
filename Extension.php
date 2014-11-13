@@ -45,14 +45,14 @@ class Extension extends \Bolt\BaseExtension
 
         // If yourextension has a 'config.yml', it is automatically loaded.
         // $foo = $this->config['bar'];
-
+    if ($this->app['config']->getWhichEnd() == 'frontend') {
         // Add CSS file
          $this->addCSS("assets/autolink.css");
 
         // Initialize the Twig function
         $this->addTwigFunction('Autolink', 'twigAutolink_aggregator');
         $this->addTwigFunction('AutolinkRSS', 'twigAutolink_RSS');
-
+        }
     }
     
     
