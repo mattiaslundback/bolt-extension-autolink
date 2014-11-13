@@ -14,7 +14,7 @@ class Extension extends \Bolt\BaseExtension
     
      * Initialize Autolink. Called during bootstrap phase.
      */
-    function init()
+    public function initialize()
     {
 
         // If yourextension has a 'config.yml', it is automatically loaded.
