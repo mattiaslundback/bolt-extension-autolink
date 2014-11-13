@@ -21,5 +21,7 @@
 		"psr-4" : {
 			"Bolt\\Extensions\\mattiaslundback\\autolink\\" : ""
 		}
-	}
+	},
+	"extra": {
+        "bolt-assets": "assets"
 }
