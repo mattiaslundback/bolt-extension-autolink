@@ -34,7 +34,7 @@ class Extension extends \Bolt\BaseExtension
      /**
      * Twig function {{ twigAutolink_RSS() }} in Autolink extension.
      */
-    function twigAutolink_RSS($url = false, $title = false)
+    public function twigAutolink_RSS($url = false, $title = false)
     {
     
         
@@ -87,7 +87,7 @@ class Extension extends \Bolt\BaseExtension
     /**
      * Twig function {{ twigAutolink_aggregator() }} in Autolink extension.
      */
-    function twigAutolink_aggregator($url = false, $title = false, $options = array())
+    public function twigAutolink_aggregator($url = false, $title = false, $options = array())
     {
     
         
