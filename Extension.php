@@ -3,6 +3,9 @@
 // Autolink Extension for Bolt, by Mattias Lundback
 
 namespace Bolt\Extension\mattiaslundback\autolink;
+use Bolt;
+use Bolt\Application;
+use Bolt\BaseExtension;
 
 class Extension extends \Bolt\BaseExtension
 {
