@@ -6,7 +6,7 @@ namespace Bolt\Extension\mattiaslundback\autolink;
 
 class Extension extends \Bolt\BaseExtension
 {
-    const NAME = 'Autolink';
+    const NAME = 'autolink';
     public function getName()
     {
         return Extension::NAME;
