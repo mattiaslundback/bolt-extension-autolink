@@ -2,14 +2,14 @@
 
 // Autolink Extension for Bolt, by Mattias Lundback
 
-namespace Bolt\Extension\mattiaslundback\autolink;
+namespace Bolt\Extension\mattiaslundback\Autolink;
 use Bolt;
 use Bolt\Application;
 use Bolt\BaseExtension;
 
 class Extension extends \Bolt\BaseExtension
 {
-    const NAME = 'autolink';
+    const NAME = 'Autolink';
     public function getName()
     {
         return Extension::NAME;
