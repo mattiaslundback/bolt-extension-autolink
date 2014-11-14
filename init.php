@@ -1,3 +1,3 @@
 <?php
-use Bolt\Extension\mattiaslundback\Autolink\Extension;
+use Bolt\Extension\Bolt\Autolink\Extension;
 $app['extensions']->register(new Extension($app));
