@@ -2,7 +2,7 @@
 
 // Autolink Extension for Bolt, by Mattias Lundback
 
-namespace Bolt\Extension\mattiaslundback\Autolink;
+namespace Bolt\Extension\Bolt\Autolink;
 use Bolt;
 use Bolt\Application;
 use Bolt\BaseExtension;
