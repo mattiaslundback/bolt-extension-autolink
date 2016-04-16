@@ -10,7 +10,7 @@ Instructions
 
 1. Download the extension and place it into your app/extensions folder as app/extensions/Autolink
 
-2. Activate it in your app/config/config.yml by adding Autolink to the `enabled_extensions` option.  
+2. Activate it in your app/config/config.yml by adding Autolink to the `enabled_extensions` option.   
 Example: `enabled_extensions: [ Autolink, your_other_extensions ... ]`
 
 3. Place the `{{ autolink() }}` Twig function in your template. Two arguments are necessary:
