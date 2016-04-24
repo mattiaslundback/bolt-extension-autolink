@@ -17,7 +17,7 @@
 	],
 	"autoload": {
         "psr-4": {
-            "Bolt\\Extension\\MattiasLundback\\Autolink\\": ["", "src/", "cache/", "assets/"]
+            "Bolt\\Extension\\MattiasLundback\\Autolink\\": ["", "src/", "config/", "assets/"]
         }
 		
 	},
