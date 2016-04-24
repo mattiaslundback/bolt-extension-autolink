@@ -6,23 +6,26 @@
 		"automatic link search blog"
 	],
 	"require" : {
-		"bolt/bolt" : ">=2.0.0,<3.0.0"
+		"bolt/bolt" : "^3.0"
 	},
 	"license" : "GPL-3.0+",
-	"authors" : [{
+	"authors" : [
+		{
 			"name" : "Mattias Lundback",
 			"email" : "mattias.lundback@ekonomism.us"
 		}
 	],
-	"autoload" : {
-		"files" : [
-			"init.php"
-		],
-		"psr-4" : {
-			"Bolt\\Extension\\Bolt\\Autolink\\" : ""
-		}
+	"autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\MattiasLundback\\Autolink\\": ["", "src/", "cache/", "assets/"]
+        }
+		
 	},
-	"extra": {
-        "bolt-assets": "assets"
-	}
+    "extra": {
+        "bolt-assets": "assets",
+        "bolt-class": "Bolt\\Extension\\MattiasLundback\\Autolink\\AutolinkExtension",
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+      }
 }
