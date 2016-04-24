@@ -1,0 +1,7 @@
+{% for raknare in 0..9 %}
+{% if autolinkitem(record.title, 'exist', raknare) == true %}
+    <div class="autolink"><div class="autolink-top"></div></div><h3><a href="{{ autolinkitem(record.title, 'id', raknare) }}"{{ autolinkitem(record.title, 'title', raknare) }}</h3><img src="{{ paths.theme }}images/logo.png" alt="Blomma" width="320px" height="auto" style="background: #060606; border:none; margin-top: 5px; "/>
+  <p>Av {{ autolinkitem(record.title, 'author', raknare) }}</p>
+  <p>{{ autolinkitem(record.title, 'summary', raknare) }}</p>
+{% endif %}
+{% endfor %}
