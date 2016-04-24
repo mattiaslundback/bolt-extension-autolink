@@ -28,6 +28,8 @@ How to get the API and ID is decribed by Google at this address: https://develop
 
 For how to create the Custom Search Engine look at this page: https://developers.google.com/custom-search/docs/overview. You need a Google account.
 
+5. Look in the autolink.twig folder for an example how to create a loop to publish ten links with thumnails.
+
 Customization
 =======================
 
