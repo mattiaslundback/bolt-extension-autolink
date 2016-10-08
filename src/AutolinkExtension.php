@@ -80,8 +80,9 @@ class AutolinkExtension extends SimpleExtension
           $file = file_get_contents($thumbapi);
           file_put_contents($cachefile, $file);
           $url = $cachefile;
-        } else {
-          $url = $cachefile;
+          if (!file_exists($cachefile)) {
+            $url = 'extensions/autolink/01.jpg';
+          }
         }
         return $url;
       }
