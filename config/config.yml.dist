@@ -4,5 +4,5 @@
 # CSS, which means you should take care of the styling in your own .css files.
 
 config:
-  thumbnail_url: 'https://api.thumbalizr.com/?url=%url%&width=300&quality=80&encoding=jpg&mode=screen&api_key='
+  thumbnail_url: 'https://api.thumbalizr.com/?url=%url%&width=300'
   google_cse_url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDxOMFonkMMdCJXvFqwj-rOcMQnxgDbwlA&cx=%cse%&q=%search%&alt=atom'
