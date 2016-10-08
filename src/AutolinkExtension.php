@@ -23,7 +23,7 @@ class AutolinkExtension extends SimpleExtension
         return [
             'config' => [
                 'css' => false,
-                'thumbapi' => 'https://api.thumbalizr.com/?url=%url%&width=300&quality=80&encoding=jpg&mode=screen&api_key=',
+                'thumbapi' => 'https://api.thumbalizr.com/?url=%url%&width=300',
                 'google_cse_url' => 'https://www.googleapis.com/customsearch/v1?key=%key%&cx=%cse%&q=%search%&alt=atom',
             ]
         ];
@@ -75,21 +75,22 @@ class AutolinkExtension extends SimpleExtension
         $cachedir = 'extensions/autolink';
         $cachefile = $cachedir . '/' . $handle . '.jpg';
         
-        if (!file_exists($cachefile) OR rand(1,10000) == 1) {
+        if (!file_exists($cachefile) OR rand(1,200) == 1) {
           $thumbapi = str_replace('%url%', $url, $thumbapi);
           $file = file_get_contents($thumbapi);
           file_put_contents($cachefile, $file);
-          $url = 'extensions/autolink/01.jpg';
+          $url = $cachefile;
         } else {
           $url = $cachefile;
         }
         return $url;
       }
       
+      // Main
+      
       $config = $this->getConfig();
       $url = $config['config']['google_cse_url'];
      
-
       include_once 'simple_html_dom.php';
 
       $title = str_replace(' ', '+', $title);  
@@ -138,11 +139,12 @@ class AutolinkExtension extends SimpleExtension
               $item['tumnagel'] = $aa;
               $articles[] = $item;
             }
-            $html->clear();
             }
-            
+            $html->clear();
+            unset($html);
+            file_put_contents($cachefile, serialize($articles));
         } 
-        file_put_contents($cachefile, serialize($articles));
+        
     } 
         
     public function autolinkitem($title = false, $falttyp = false, $nummer = false) {
