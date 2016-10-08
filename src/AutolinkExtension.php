@@ -75,7 +75,7 @@ class AutolinkExtension extends SimpleExtension
         $cachedir = 'extensions/autolink';
         $cachefile = $cachedir . '/' . $handle . '.jpg';
         
-        if (!file_exists($cachefile) OR rand(1,100000) == 1) {
+        if (!file_exists($cachefile) OR rand(1,10000) == 1) {
           $thumbapi = str_replace('%url%', $url, $thumbapi);
           $file = file_get_contents($thumbapi);
           file_put_contents($cachefile, $file);
@@ -119,7 +119,7 @@ class AutolinkExtension extends SimpleExtension
            $articles = unserialize(file_get_contents($cachefile));
       }
         
-      if (!file_exists($cachefile) OR rand(1,100000) == 1) {
+      if (!file_exists($cachefile) OR rand(1,1000) == 1) {
             
             $html = file_get_html($url);
             
