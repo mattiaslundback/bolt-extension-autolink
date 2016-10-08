@@ -23,6 +23,6 @@
 	},
     "extra": {
         "bolt-assets": "assets",
-        "bolt-class": "Bolt\\Extension\\MattiasLundback\\Autolink\\AutolinkExtension",
+        "bolt-class": "Bolt\\Extension\\MattiasLundback\\Autolink\\AutolinkExtension"
       }
 }
