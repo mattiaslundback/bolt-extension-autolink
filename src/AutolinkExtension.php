@@ -55,11 +55,11 @@ class AutolinkExtension extends SimpleExtension
           $ex = explode('|', $url);
           $url = $ex['0'];
         } 
-        if ( strpos($url, '-') !== false ) {
+        if ( strpos($url, ' -') !== false ) {
           $ex = explode('-', $url);
           $url = $ex['0'];
         } 
-        if ( strpos($url, '-') !== false ) {
+        if ( strpos($url, ' -') !== false ) {
           $ex = explode('-', $url);
           $url = $ex['0'];
         } 
